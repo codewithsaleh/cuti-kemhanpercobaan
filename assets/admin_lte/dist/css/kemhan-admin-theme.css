@@ -1,0 +1,417 @@
+/*
+ * =================================================================
+ * TEMA MODERN "BERRY" UNTUK ADMINLTE (DIMODIFIKASI DENGAN GAYA DAPODIK)
+ * =================================================================
+ */
+
+/* Menggunakan Font Poppins yang sudah dimuat di header.php */
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Latar belakang utama halaman konten (Tetap) */
+.content-wrapper {
+    background-color: #f4f6f9 !important;
+}
+.wrapper {
+    background-color: #f4f6f9 !important;
+}
+
+
+/*
+ * =================================================================
+ * [PEROMBAKAN] GAYA SIDEBAR MENJADI SEPERTI DAPODIK
+ * =================================================================
+ */
+
+/* Sidebar Utama */
+.main-sidebar {
+    background-color: #1c3a55 !important; /* Warna biru gelap */
+    box-shadow: none !important;
+    border-right: 0 !important;
+}
+
+/* Menghilangkan brand-link dan user-panel bawaan karena diganti */
+.brand-link, .user-panel {
+    display: none !important;
+}
+
+/* Header Sidebar Kustom */
+.sidebar-header {
+    padding: 15px;
+    background-color: #132a40; /* Warna header lebih gelap */
+    border-bottom: 1px solid #2a4a6c;
+}
+.sidebar-header .brand-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.sidebar-header .brand-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.sidebar-header .brand-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.sidebar-header .brand-subtitle {
+    color: #a7bed8;
+    font-size: 0.75rem;
+}
+
+/* Menu Sidebar */
+.nav-sidebar {
+    padding: 8px !important;
+}
+.nav-sidebar .nav-item {
+    margin-bottom: 2px;
+}
+.nav-sidebar .nav-item .nav-link {
+    color: #a7bed8; /* Warna teks menu default */
+    font-weight: 500;
+    border-radius: 4px; /* Sedikit rounded corner agar tidak terlalu kaku */
+    transition: all 0.2s ease-in-out;
+    padding: 10px 15px;
+    margin: 0;
+}
+.nav-sidebar .nav-item .nav-icon {
+    color: #a7bed8; /* Warna ikon default */
+    margin-right: 0.8rem !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek Hover pada Menu */
+.nav-sidebar .nav-item:hover > .nav-link {
+    background-color: #132a40 !important; /* Latar belakang saat hover */
+    color: #ffffff !important; /* Warna teks saat hover */
+}
+.nav-sidebar .nav-item:hover > .nav-link .nav-icon {
+    color: #ffffff !important; /* Warna ikon saat hover */
+}
+
+/* Gaya Menu Aktif */
+.nav-sidebar .nav-item > .nav-link.active {
+    background-color: #0d1d2e !important; /* Latar belakang saat aktif */
+    color: #ffffff !important;
+    box-shadow: none !important; /* Menghapus shadow ungu */
+    border-left: 4px solid #f9c400; /* Garis kuning penanda aktif */
+    border-radius: 0 4px 4px 0;
+}
+.nav-sidebar .nav-item > .nav-link.active .nav-icon {
+    color: #ffffff !important;
+}
+/* Menyesuaikan padding agar ikon tidak terlalu menempel ke garis */
+.nav-sidebar .nav-item > .nav-link.active {
+    padding-left: 11px; /* 15px (original) - 4px (border) */
+}
+
+/* --- AKHIR DARI PEROMBAKAN SIDEBAR --- */
+
+
+/* Navbar Atas (Tetap) */
+.main-header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #eef2f6 !important;
+    box-shadow: none;
+}
+.main-header .nav-link {
+    color: #697586 !important;
+}
+
+/* Kartu dan Panel (Tetap) */
+.card {
+    background-color: #ffffff !important;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 2rem 0 rgba(0,0,0,.05);
+    transition: all 0.3s ease-in-out;
+}
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid #eef2f6 !important;
+}
+
+/* Stat Box Dashboard (Tetap) */
+.small-box {
+    border-radius: 12px;
+    box-shadow: 0 0 2rem 0 rgba(0,0,0,.05);
+    color: #ffffff;
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.small-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.small-box .inner h3, .small-box .inner p {
+    color: #ffffff !important;
+}
+
+/* Warna Kustom Gradasi untuk Stat Box (Tetap) */
+.bg-gradient-purple { background: linear-gradient(135deg, #8685EF 0%, #7267EF 100%) !important; }
+.bg-gradient-blue   { background: linear-gradient(135deg, #3AA5F0 0%, #2D8FF0 100%) !important; }
+.bg-gradient-red     { background: linear-gradient(135deg, #F06A82 0%, #F04A6D 100%) !important; }
+.bg-gradient-orange { background: linear-gradient(135deg, #F0993A 0%, #F0812D 100%) !important; }
+.bg-gradient-teal   { background: linear-gradient(135deg, #3AF0E2 0%, #2DDBCF 100%) !important; }
+
+/* Animasi Transisi Halaman (Tetap) */
+.content-wrapper {
+    animation: fadeInEffect 0.4s ease-in-out;
+}
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gaya untuk wadah chart (Tetap) */
+.chart-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
+}
+/* ... a lot of existing code ... */
+.card-table-modern .page-link:hover {
+    color: #5a51d4; background-color: #f4f6f9;
+}
+
+
+/*
+ * =================================================================
+ * [PERBAIKAN] GAYA SIDEBAR SAAT COLLAPSE (MINI)
+ * =================================================================
+ */
+
+/* Saat sidebar di-collapse, atur lebar dan transisi */
+body.sidebar-collapse .main-sidebar {
+    width: 80px !important;
+}
+body.sidebar-collapse .content-wrapper,
+body.sidebar-collapse .main-header,
+body.sidebar-collapse .main-footer {
+    margin-left: 80px !important;
+}
+
+/* Sembunyikan header sidebar sepenuhnya saat di-collapse */
+body.sidebar-collapse .sidebar-header {
+    display: none;
+}
+
+/* Atur ulang menu agar ikon berada di tengah */
+body.sidebar-collapse .nav-sidebar .nav-link {
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+/* Atur ulang ikon */
+body.sidebar-collapse .nav-sidebar .nav-link .nav-icon {
+    margin-right: 0 !important;
+    font-size: 1.2rem;
+}
+
+/* Ubah gaya menu aktif dari garis menjadi latar belakang */
+body.sidebar-collapse .nav-sidebar .nav-item > .nav-link.active {
+    border-left: 5px solid transparent; /* Hilangkan garis kuning panjang */
+    background-color: #ffc107 !important; /* Ganti dengan background kuning */
+    border-radius: 8px; /* Pastikan sudutnya membulat */
+}
+
+/* Ganti warna ikon aktif agar kontras dengan latar kuning */
+body.sidebar-collapse .nav-sidebar .nav-item > .nav-link.active .nav-icon {
+    color: #1a223a !important;
+}
+
+/* * =================================================================
+ * [PERBAIKAN BARU] Menghilangkan Tooltip Hover di Sidebar Mini
+ * =================================================================
+ */
+.sidebar-mini.sidebar-collapse .main-sidebar:hover .nav-sidebar .nav-item > .nav-link > p {
+    display: none !important;
+}
+
+/* ... a lot of existing code ... */
+/* [PERBAIKAN] Menghilangkan Tooltip Hover di Sidebar Mini */
+body.sidebar-collapse .sidebar-menu>li>a>.fa,
+body.sidebar-collapse .sidebar-menu>li>a>.glyphicon,
+body.sidebar-collapse .sidebar-menu>li>a>.ion,
+body.sidebar-collapse .nav-sidebar .nav-item .nav-link p {
+    display: none !important;
+}
+
+body.sidebar-collapse .sidebar .nav-sidebar .nav-link .pull-right-container {
+    display: none !important;
+}
+
+/*
+ * =================================================================
+ * [FITUR BARU] GAYA UNTUK HALAMAN LAPORAN
+ * =================================================================
+ */
+
+/* Kartu Filter */
+.card-form-filter {
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+    box-shadow: none;
+}
+.card-form-filter .card-header {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+.card-form-filter .btn-primary {
+    background-color: #7267EF;
+    border-color: #7267EF;
+    font-weight: 500;
+}
+
+/* Kartu Laporan */
+.card-report {
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+.card-report:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+.card-report .card-body {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+.card-report .report-icon {
+    font-size: 2.5rem;
+    color: #7267EF;
+    margin-right: 1.5rem;
+    min-width: 50px;
+    text-align: center;
+}
+.card-report .report-content h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #121926;
+    margin-bottom: 0.25rem;
+}
+.card-report .report-content p {
+    color: #697586;
+    margin-bottom: 0;
+}
+.card-report .report-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem; /* Memberi jarak antar tombol */
+}
+
+/*
+ * =================================================================
+ * [BARU] FILE CSS UNTUK RESPONSIVITAS WEBSITE
+ * =================================================================
+ */
+
+/*
+ * -----------------------------------------------------------------
+ * Tampilan Tablet (Layar di bawah 992px)
+ * -----------------------------------------------------------------
+ */
+@media (max-width: 991.98px) {
+    /* Perkecil ukuran font judul utama agar tidak terlalu besar */
+    .content-header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Atur agar stat box di dashboard tidak terlalu besar */
+    .small-box {
+        min-height: 120px;
+    }
+
+    .small-box h3 {
+        font-size: 2rem;
+    }
+
+    /* Pastikan sidebar tidak menimpa konten saat muncul di layar kecil */
+    .sidebar-open .main-sidebar {
+        z-index: 1040;
+    }
+}
+
+/*
+ * -----------------------------------------------------------------
+ * Tampilan Handphone (Layar di bawah 768px)
+ * -----------------------------------------------------------------
+ */
+@media (max-width: 767.98px) {
+    /* Judul halaman dibuat rata tengah agar lebih rapi */
+    .content-header .col-sm-6 {
+        text-align: center;
+        width: 100%;
+    }
+    .content-header .breadcrumb {
+        float: none !important;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Atur agar stat box dashboard menjadi 2 kolom, bukan 4 */
+    .col-lg-3.col-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Tombol dan input di dalam tabel (seperti Search) dibuat full width */
+    .dataTables_filter,
+    .dataTables_length {
+        text-align: left !important;
+        width: 100%;
+    }
+    .dt-buttons {
+        float: none !important;
+        text-align: left !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Perbaiki tampilan header kartu (card-header) */
+    .card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-header .card-tools {
+        padding-top: 10px;
+    }
+
+    /* Pastikan chat container tidak terlalu tinggi di HP */
+    .chat-container {
+        height: calc(100vh - 200px);
+    }
+}
+
+/*
+ * -----------------------------------------------------------------
+ * Tampilan Handphone Sangat Kecil (Layar di bawah 576px)
+ * -----------------------------------------------------------------
+ */
+@media (max-width: 575.98px) {
+    /* Stat box dashboard dibuat 1 kolom agar tidak terlalu sempit */
+    .col-lg-3.col-6 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Perkecil padding di konten utama */
+    .content {
+        padding: 0.5rem !important;
+    }
+}

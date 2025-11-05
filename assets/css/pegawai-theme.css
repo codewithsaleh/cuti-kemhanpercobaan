@@ -1,0 +1,75 @@
+/*
+ * =================================================================
+ * TEMA KHUSUS UNTUK HALAMAN PEGAWAI
+ * =================================================================
+ */
+
+/* [HEADER SAMBUTAN] Gaya untuk sapaan di dashboard */
+.welcome-header {
+    margin-bottom: 20px;
+}
+.welcome-header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #121926;
+}
+.welcome-header p {
+    font-size: 1rem;
+    color: #697586;
+}
+
+/* [SIDEBAR] Menggunakan gaya yang sama persis seperti sidebar Admin */
+
+/* Header Sidebar Kustom */
+.sidebar-header {
+    display: flex; /* [PENTING] Untuk menata logo dan teks berdampingan */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 15px;
+    background-color: #132a40; /* Warna header lebih gelap */
+    border-bottom: 1px solid #2a4a6c;
+}
+.sidebar-header .brand-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.sidebar-header .brand-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.sidebar-header .brand-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.sidebar-header .brand-subtitle {
+    color: #a7bed8;
+    font-size: 0.75rem;
+}
+
+/* Tautan header agar tidak ada garis bawah */
+a.sidebar-header-link,
+a.sidebar-header-link:hover {
+    text-decoration: none;
+}
+
+
+/* [SIDEBAR MINI] Perbaikan saat sidebar di-collapse */
+
+/* Sembunyikan header sidebar sepenuhnya saat di-collapse */
+body.sidebar-collapse .main-sidebar .sidebar-header {
+    display: none;
+}
+
+/* Atur ulang menu agar ikon berada di tengah */
+body.sidebar-collapse .main-sidebar .nav-sidebar .nav-link {
+    justify-content: center;
+}
+
+/* Atur ulang ikon */
+body.sidebar-collapse .main-sidebar .nav-sidebar .nav-link .nav-icon {
+    margin-right: 0 !important;
+    font-size: 1.2rem;
+}
+
