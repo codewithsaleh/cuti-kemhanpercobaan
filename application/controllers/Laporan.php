@@ -125,6 +125,9 @@ class Laporan extends CI_Controller
     // Atau buka di new tab/window
     public function cetak_sisa_cuti()
     {
+        if (!check_user_level([2])) {
+            return;
+        }
         // 1. Minta data dari model
         $data['pegawai'] = $this->m_user->get_all_pegawai_with_sisa_cuti();
 

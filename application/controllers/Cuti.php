@@ -88,7 +88,7 @@ class Cuti extends CI_Controller
         $this->db->order_by('c.tgl_diajukan', 'DESC');
         $data['cuti'] = $this->db->get()->result_array();
 
-        // Data untuk filter
+        // Data untuk filter=
         $data['current_filter'] = $filter;
 
         // Ambil data jenis cuti untuk filter (jika diperlukan)
